@@ -1,4 +1,3 @@
 void main() {
-  // single-line comment
-  /* Multiline comment */
+  print("Hello World!");
 }
