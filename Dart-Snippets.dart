@@ -1,14 +1,17 @@
 void main() {
-  var studentName = "Ali";
-  double studentGPA = 3.36;
+  
+  var userId = 112;
+/* 
+  Variable naming rules
+  -Variable names can contain alphabets (Small capital), numbers, $ sign, underscore -
+  -Variabel name must began with alphabets, $, -, we can't start variable name with numbers
+  -We can't use keywords as variable names
+  -We can't use space or any special chrachters inside a variable name
 
-  print("Student name is $studentName and GPA is " + studentGPA.toString());
+  Variable naming conventions
+  -Variable name should be descriptive
+  -Variable name should written in camelcases
+  -Variable name should be short in length
+*/
 
-  // String Concatenation
-  // concatenate 'string' with 'another string'
-  // concatenate 'string' with 'integer-variable'
-  // concatenate 'string' with 'double-variable'
-  // concatenate 'string' with 'boolean-variable'
-
-  // we use plus (+) sign to concatenate strings with other element
 }
