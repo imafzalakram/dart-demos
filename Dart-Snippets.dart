@@ -1,5 +1,5 @@
-//Program to convert Celsuis to Fahrenheit
+//Program to convert Fahrenheit to Celsuis
 void main() {
-  double celsuisTemp = 33.23;
-  print(" ${celsuisTemp}°C is ${(celsuisTemp*9/5)+32}°F");
+  double fahrenTemp = 33.23;
+  print(" ${fahrenTemp}°F is ${(fahrenTemp-32)*5/9}°C");
 }
