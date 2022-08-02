@@ -1,5 +1,6 @@
-//Program to convert Fahrenheit to Celsuis
+//Program to calcualte how old you will be in a future year?
 void main() {
-  double fahrenTemp = 33.23;
-  print(" ${fahrenTemp}°F is ${(fahrenTemp-32)*5/9}°C");
+  int birthYear = 1992;
+  int futureYear = 2040;
+  print("I will be ${futureYear - birthYear} in $futureYear");
 }
