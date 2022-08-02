@@ -1,6 +1,6 @@
-//Program to calcualte how old you will be in a future year?
+//Write a program to print values of two integer variables in single linevoid main() {
 void main() {
-  int birthYear = 1992;
-  int futureYear = 2040;
-  print("I will be ${futureYear - birthYear} in $futureYear");
+  int no1 = 312;
+  int no2 = 532;
+  print("No1 is $no1 and No2 is $no2");
 }
