@@ -1,9 +1,14 @@
 void main() {
-  // Simple if else statement
-  var wantToLearnFlutter = false;
-  if (wantToLearnFlutter) {
-    print("Learn Dart first!");
+  // if else-if statement
+
+  bool isRaining = false;
+  bool isSnowing = true;
+
+  if (isRaining) {
+    print("Wear Jacket");
+  } else if (isSnowing) {
+    print("Wear Coat");
   } else {
-    print("Learn somehting else");
+    print("Wear casual dress");
   }
 }
