@@ -1,21 +1,11 @@
 void main() {
+  // Syntax to implement Increment & decrement operators in expressions
+  int a = 10, b = 20, c;
 
-// Syntax for Increment (pre-increment, post-increment) & Decrement (pre-decrement, post-decrement) operators
-  int a = 10;
-  
-  // Pre-increment
-  ++a;                   // a = a + 1
-  print(a);
-  // post-increment
-  a++;                   // a = a + 1
-  print(a);
-  
-  // Pre - decrement
-  --a;                   // a = a - 1
-  print(a);
-  
-  // post -decrement 
-  a--;                   // a = a - 1
-  print(a);
+  //   10      20     10
+  c = (a--) + (++b) + 10;
 
+  print(c);
+  print(a);
+  print(b);
 }
