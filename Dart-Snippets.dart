@@ -1,11 +1,9 @@
+// Dart program to explain optional positional parameters
 void main() {
-  // Syntax to implement Increment & decrement operators in expressions
-  int a = 10, b = 20, c;
+  addition(20, 40, 60, 80);
+}
 
-  //   10      20     10
-  c = (a--) + (++b) + 10;
-
-  print(c);
-  print(a);
-  print(b);
+void addition(int no1, int no2, [int no3 = 0, int no4 = 0]) {
+  int sum = no1 + no2 + no3 + no4;
+  print(sum);
 }
