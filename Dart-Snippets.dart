@@ -1,11 +1,15 @@
-// A simple dart function without params & without returning a value
+// A dart program to pass different types of params into a function
 void main() {
   //Function calling
-  addition();
+  checkStudentStatus("Afzal", 45, 2.4);
 }
 
 // Function definition
-void addition() {
-  int no1= 10 , no2 = 20, no3 = 30,  no4 = 50;
-  print( no1 + no2 + no3 + no4);
+void checkStudentStatus(String userName, int userRollNo, double userGPA) {
+  if (userGPA >= 3.0) {
+    print("The user '$userName' with roll# $userRollNo has good GPA");
+  } else if (userGPA < 3) {
+    print(
+        "The user '$userName' with roll# $userRollNo has to improve his/her GPA");
+  }
 }
