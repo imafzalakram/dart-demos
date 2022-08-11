@@ -1,10 +1,11 @@
-// Dart program to print returned value from a function
+// A simple dart function without params & without returning a value
 void main() {
   //Function calling
-  print("The sum is ${addition(20, 40, 60, 80)}");
+  addition();
 }
 
 // Function definition
-int addition(int no1, int no2, int no3, int no4) {
-  return no1 + no2 + no3 + no4;
+void addition() {
+  int no1= 10 , no2 = 20, no3 = 30,  no4 = 50;
+  print( no1 + no2 + no3 + no4);
 }
