@@ -1,15 +1,12 @@
-// A dart program to pass different types of params into a function
+//Dart program to deal with positional optional params
 void main() {
-  //Function calling
-  checkStudentStatus("Afzal", 45, 2.4);
+  // function calling
+  addition(20, 40);
+  addition(20, 40, 60);
+  addition(20, 40, 60, 80);
 }
 
-// Function definition
-void checkStudentStatus(String userName, int userRollNo, double userGPA) {
-  if (userGPA >= 3.0) {
-    print("The user '$userName' with roll# $userRollNo has good GPA");
-  } else if (userGPA < 3) {
-    print(
-        "The user '$userName' with roll# $userRollNo has to improve his/her GPA");
-  }
+
+void addition(int no1, int no2, [int no3 = 0, int no4 = 0]) {
+  print ("The sum is ${no1+no2+no3+no4}");
 }
