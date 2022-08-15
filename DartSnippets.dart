@@ -1,12 +1,41 @@
-// We can convert an optional param to required by adding a 'required' specifier
 void main() {
-  // function calling
-  addition(20, 40, no3:45);
-  addition(20, 40, no3:60);
-  addition(20, 40, no3:50, no4:80);
-}
+  // Inferred List
+  var studentInfo = ["Ali", 45, 3.45, 34543454533];
 
+  // The second way to create a list
+  List studentInformation = ["Ali", 45, 3.45, 2324342342];
 
-void addition(int no1, int no2, {required int no3, int no4 = 0}) {
-  print ("The sum of numbers is ${no1+no2+no3+no4}");
+// A way to create a statically typed List
+  List<String> listOfNames = ["Ali", "Hamza", "Usman", "Sufyan"];
+  List<int> listOfRollNos = [23, 42, 42, 56, 78, 32];
+  List<double> listOfGPAs = [2.3, 3.4, 3.3, 2.23, 2.2, 3];
+
+// List declaration and initialization
+  var list = []; // List declaration
+
+  // List's initilization
+  list.add("Ali");
+  list.add(45);
+  list.add(3.36);
+  list.add(false);
+
+  List list2 = []; // List declaration
+
+  // List's initilization
+  list2.add("Ali");
+  list2.add(45);
+  list2.add(3.36);
+  list2.add(false);
+
+  List<String> nameList = [];  // List declaration 
+  
+  // List's initialization
+  nameList.add("Ali");
+  nameList.add("Hamza");
+  nameList.add("Qais");
+
+  //How to visit a List through loop
+  for (String singleName in nameList) {
+    print(singleName);
+  }
 }
