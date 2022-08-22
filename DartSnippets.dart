@@ -1,71 +1,31 @@
 void main() {
-  
+  //* 3 methods to create class objects in dart
+
+  // Method-1
+  Student student1 = Student();
+
+  // Method-2
+  Student student2 = new Student();
+
+  // Method-3
+  var student3 = Student();
+  var student4 = new Student();
+
+  // How to call class functions through objects
+  student1.printHelloWorld();
+  student2.printHelloWorld();
 }
 
-
-// We Learnt: Procedural Programming 
- // Topic: Object Oriented Programming ( OOP )
- 
- // OOP is not a language
- // OOP is the name of structure
- // OOP is the name of Approach
- // OOP is the name of Pattern
- // OOP is just a way of working
- // Now onwards, our way of working will be different
- // We will implement procedural concepts in OOP
-  
-  
-  
-//OOP Main Concepts
-// *Classes & Objects
-// *Constructors
-// *Inheritance
-// *Polymorphism
-// *Abstraction
-// *Encapsulation
-// *Generics
-
-
-// ========================
-
-//Classes & Objects
-// *What is the concept of classes & objects
-// -A Class represents a group 
-// -Classes can only have two things
-// (1) Functions / Methods 
-// (2) Properties / Fields / Attributes
-
-
-//=========================
-
- // *How to create a class in Dart
- // *In general, there are two thypes of classes, buil-in and user defined
- // *We always use upper camel case convetion while creating classes
-
 class Student {
- 
-// Class Properties / Fields / Attributes / variables
- late String studentName;
- late int studentRollNo;
- late double studentGPA;
- late bool isCheck;
- var emailAddress;
- var phoneNumer;
-    
-  
-// Functions / Methods
+// 3 ways to create class attributes / fields / properties / instance variables
+  late String studentName;
+  late int studentRollNo;
+  double? studentGPA;
+  var emailAddress;
+  var phoneNumber;
 
-  void printStudentDetails() {
-    
+// Functions / Methods
+  void printHelloWorld() {
+    print("hello world!");
   }
-  
-  double gpaCalcuator ( ) {
-    
-    return 0.0;
-  } 
-  
-  performance () {
-    
-  }
-  
 }
