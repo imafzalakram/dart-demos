@@ -1,45 +1,57 @@
 void main() {
-  Student student1 = Student();
-  Student student2 = Student();
+  //  ** Constructors **
 
-  //How to pass parameters to a class's function through object
-  student1.getStudentDetails("Afzal", 45, 3.36,
-      phoneNum: 9212123244, emailAdd: "imafzalakram@gmail.com");
-  student2.getStudentDetails("Ali", 32, 3.4,
-      phoneNum: 9231245334, emailAdd: "ali@gmail.com");
+  // Syntax to create a Constructor: 1- Constructor is created through 'class-name' with 'pranthesis' and 'body' (optional)
+  // Constructors are just like functions or special funcitons
+  // Constructors call automatically
+  // When there's no explicit constructor in a class then defualt constructor calls
+  // There's no return type of constructor
+  // Constructor implementation
+  // Object Initialization in constructors
+  // Like functions, We can also pass parameters to the constructors
+  // We can use 'this' keyword to resolve name-conflict inside the class
+  // We can have more than one construcots in a class
 
-  student1.printStudentDetails();
-  student2.printStudentDetails();
+  Student student1 =
+      Student("Afzal", 45, 3.36, 9231234556); // Object creation on right side
+  Student student2 =
+      Student("Ali", 44, 3.24, 9231235634); // Object construction on right side
+ 
+// we can access calss properties through object by using dot operator
+  print("Student-1 name ${student1.name}");
+  print("Student-2 name ${student2.name}");
+
+  print("Student-1 roll no ${student1.rollNo}");
+  print("Student-2 roll no ${student2.rollNo}");
+
+  print("Student-1 GPA ${student1.gpa}");
+  print("Student-2 GPA ${student2.gpa}");
+
+  print("Student-1 Phone Number ${student1.phoneNumber}");
+  print("Student-2 Phone Number ${student2.phoneNumber}");
+
+  // We can also call class-function to print the values of class properties
+  student1.printStudentData();
+  student2.printStudentData();
 }
 
 class Student {
-// Class Properties / Fields / Attributes / instance variables
-  late String studentName;
-  late int studentRollNo;
-  late double studentGPA;
-  var emailAddress;
-  var phoneNumber;
+  late String name;
+  late int rollNo;
+  late double gpa;
+  late int phoneNumber;
 
-// Functions / Methods
-  void printHelloWorld() {
-    print("hello world!");
+  Student(String name, int rollNo, double gpa, int phoneNumber) {
+    this.name = name;
+    this.rollNo = rollNo;
+    this.gpa = gpa;
+    this.phoneNumber = phoneNumber;
   }
 
-  void getStudentDetails(String name, int rollNo, double gpa,
-      {String? emailAdd, int? phoneNum}) {
-    // We are assigning function params-values to class attributes
-    studentName = name;
-    studentRollNo = rollNo;
-    studentGPA = gpa;
-    emailAddress = emailAdd;
-    phoneNumber = phoneNum;
-  }
-
-  void printStudentDetails() {
-    print(studentName);
-    print(studentRollNo);
-    print(studentGPA);
-    print(emailAddress);
+  void printStudentData() {
+    print(name);
+    print(rollNo);
+    print(gpa);
     print(phoneNumber);
   }
 }
