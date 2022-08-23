@@ -1,31 +1,45 @@
 void main() {
-  //* 3 methods to create class objects in dart
-
-  // Method-1
   Student student1 = Student();
+  Student student2 = Student();
 
-  // Method-2
-  Student student2 = new Student();
+  //How to pass parameters to a class's function through object
+  student1.getStudentDetails("Afzal", 45, 3.36,
+      phoneNum: 9212123244, emailAdd: "imafzalakram@gmail.com");
+  student2.getStudentDetails("Ali", 32, 3.4,
+      phoneNum: 9231245334, emailAdd: "ali@gmail.com");
 
-  // Method-3
-  var student3 = Student();
-  var student4 = new Student();
-
-  // How to call class functions through objects
-  student1.printHelloWorld();
-  student2.printHelloWorld();
+  student1.printStudentDetails();
+  student2.printStudentDetails();
 }
 
 class Student {
-// 3 ways to create class attributes / fields / properties / instance variables
+// Class Properties / Fields / Attributes / instance variables
   late String studentName;
   late int studentRollNo;
-  double? studentGPA;
+  late double studentGPA;
   var emailAddress;
   var phoneNumber;
 
 // Functions / Methods
   void printHelloWorld() {
     print("hello world!");
+  }
+
+  void getStudentDetails(String name, int rollNo, double gpa,
+      {String? emailAdd, int? phoneNum}) {
+    // We are assigning function params-values to class attributes
+    studentName = name;
+    studentRollNo = rollNo;
+    studentGPA = gpa;
+    emailAddress = emailAdd;
+    phoneNumber = phoneNum;
+  }
+
+  void printStudentDetails() {
+    print(studentName);
+    print(studentRollNo);
+    print(studentGPA);
+    print(emailAddress);
+    print(phoneNumber);
   }
 }
