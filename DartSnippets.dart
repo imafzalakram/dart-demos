@@ -1,34 +1,55 @@
 void main() {
-// We can call parent constructors from child class's constructor, constructor-1 of cat class can call constructor-1 of animal and constructor-2 from cat class can call constructor-2 of animal class and so on
-  Map catDetails = {
-    'cat_name': 'Simba',
-    'cat_weight': 4,
-    'cat_skincolor': 'light brown'
-  };
+  Student obj1 = Student("Ali", 45, 3.36, 92312343645);
+  Student obj2 = Student.namedConstructor1("Hamza", 34, 3.1, 923123423233);
+  Student obj3 = Student.namedConstructor2("Madeeha", 56, 3.4, 923123423534);
+  Student obj4 = Student.namedConstructor3("Fatima", 42, 3.6, 923124534533);
 
-  Cat cat = Cat(4);
-  Cat cat2 = Cat.details(catDetails);
+  obj1.printStudentData();
+  obj2.printStudentData();
+  obj3.printStudentData();
+  obj4.printStudentData();
 }
 
-class Animal {
-  // Parameterized Constructor
-  Animal(int animalWeight) {
-    print("Animal weight is $animalWeight");
+class Student {
+  late String name;
+  late int rollNo;
+  late double gpa;
+  late int phoneNumber;
+
+  // Parameterised Constructor
+  Student(String name, int rollNo, double gpa, int phoneNumber) {
+    this.name = name;
+    this.rollNo = rollNo;
+    this.gpa = gpa;
+    this.phoneNumber = phoneNumber;
   }
 
-  Animal.details(Map animalDetails) {
-    print("Animal name is ${animalDetails['cat_name']}");
-    print("Animal weight is ${animalDetails['cat_weight']}");
-    print("Animal skin color is ${animalDetails['cat_skincolor']}");
-  }
-}
-
-class Cat extends Animal {
-  Cat(int catWeight) : super(catWeight) {
-    print("Cat weight is $catWeight");
+  // This is a named-constructor
+  Student.namedConstructor1(String name, int rollNo, double gpa, int phone) {
+    this.name = name;
+    this.rollNo = rollNo;
+    this.gpa = gpa;
+    this.phoneNumber = phone;
   }
 
-  Cat.details(Map catDetails) : super.details(catDetails) {
-    print("Cat named class constructor is called!");
+  Student.namedConstructor2(String name, int rollNo, double gpa, int phone) {
+    this.name = name;
+    this.rollNo = rollNo;
+    this.gpa = gpa;
+    this.phoneNumber = phone;
+  }
+
+  Student.namedConstructor3(String name, int rollNo, double gpa, int phone) {
+    this.name = name;
+    this.rollNo = rollNo;
+    this.gpa = gpa;
+    this.phoneNumber = phone;
+  }
+
+  void printStudentData() {
+    print(name);
+    print(rollNo);
+    print(gpa);
+    print(phoneNumber);
   }
 }
