@@ -18,6 +18,6 @@ class Cat extends Animal {
   }
 
   Cat.food(String foodName) {
-    print(foodName);
+    print("Cat food is $foodName");
   }
 }
