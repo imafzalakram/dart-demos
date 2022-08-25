@@ -1,23 +1,32 @@
 void main() {
-// When there will be both 'no-argument' & 'named' constructors in Cat class and the same 'no-argument' constructor in Animal class then again parent class constructor will call first
-  Cat cat = Cat();
-  Cat cat2 = Cat.food("Beef");
+//  When there will be 'multiple-arguments' in Cat class and in Animal class then we must have to use super keyword iwth all child class constructors   Cat cat = Cat(4);
+  Map catDetails = {
+    'cat_name': 'Simba',
+    'cat_weight': 4,
+    'cat_skincolor': 'light brown'
+  };
+  
+  Cat cat = Cat(4);
+  Cat cat2 = Cat.details(catDetails);
 }
 
 class Animal {
   // Parameterized Constructor
-  Animal() {
-    print("Animal's no argument constructor");
+  Animal(int animalWeight) {
+    print("Animal weight is $animalWeight");
   }
 }
 
+
 class Cat extends Animal {
-  // Parameterized Constructor
-  Cat() {
-    print("Cat's no argument constructor ");
+  
+  Cat(int catWeight) : super(catWeight) {
+    print("Cat weight is $catWeight");
   }
 
-  Cat.food(String foodName) {
-    print("Cat food is $foodName");
+  Cat.details(Map catDetails) : super(catDetails['cat_weight']) {
+    print("Cat name is ${catDetails['cat_name']}");
+    print("Cat weight is ${catDetails['cat_name']}");
+    print("Cat skin color is ${catDetails['cat_skincolor']}");
   }
 }
