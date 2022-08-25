@@ -1,5 +1,5 @@
 void main() {
-//  When there will be 'multiple-arguments' in Cat class and in Animal class then we must have to use super keyword iwth all child class constructors   Cat cat = Cat(4);
+//  When there will be 'multiple-arguments' in Cat class and in Animal class then we must have to use super keyword iwth all child class constructors
   Map catDetails = {
     'cat_name': 'Simba',
     'cat_weight': 4,
