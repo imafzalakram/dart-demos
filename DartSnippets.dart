@@ -1,21 +1,36 @@
 void main() {
-  C obj = C(c: 24);
+  //Method-1
+  C obj = C();
+  B abc = B(cTypeObject: obj);
+
+  // Method-2
+  B nbp = B(cTypeObject: C());
+
+  // Method-2 after indentation
+  B npb = B(
+    cTypeObject: C(),
+  );
 }
 
 class A {
-  A({int? a}) {
-    print("Class A argument $a");
+
+  A({B? bTypeObject}) {
+    
+  }
+
+}
+
+class B {
+
+  B({C? cTypeObject}) {
+    
   }
 }
 
-class B extends A {
-  B({int? b}) : super(a: b) {
-    print("Class B argument $b");
-  }
-}
+class C {
 
-class C extends B {
-  C({int? c}) : super(b: c) {
-    print("Class C argument $c");
+  C({A? aTypeObject}) {
+    
   }
+  
 }
