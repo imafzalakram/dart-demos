@@ -1,36 +1,41 @@
 void main() {
-  //Method-1
-  C obj = C();
-  B abc = B(cTypeObject: obj);
-
-  // Method-2
-  B nbp = B(cTypeObject: C());
-
-  // Method-2 after indentation
-  B npb = B(
-    cTypeObject: C(),
+  MaterialApp obj = MaterialApp(
+    title: "Instagram",
+    fontSize: ThemeData(
+      themeSize: 10,
+      themeName: "Dark Material Theme",
+      appBar: AppBar(
+        appBarColor: "Brown",
+        childs: 4,
+      ),
+    ),
+    textColor: MyHomePage(
+      pageName: "Home Page",
+      pageSize: 20,
+    ),
   );
 }
 
-class A {
+// composition
+class MaterialApp {
 
-  A({B? bTypeObject}) {
-    
-  }
+  MaterialApp({String? title, ThemeData? fontSize, MyHomePage? textColor}) {
 
-}
-
-class B {
-
-  B({C? cTypeObject}) {
-    
   }
 }
 
-class C {
+class ThemeData {
+  ThemeData({AppBar? appBar, String? themeName, int? themeSize}) {}
 
-  C({A? aTypeObject}) {
-    
+  themeDataFunc() {
+
   }
-  
+}
+
+class MyHomePage {
+  MyHomePage({String? pageName, int? pageSize}) {}
+}
+
+class AppBar {
+  AppBar({String? appBarColor, int? childs}) {}
 }
