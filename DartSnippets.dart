@@ -1,9 +1,6 @@
 void main() {
-// Variable declaration
-  var name;
-  var rollNo;
-  var GPA;
-  var state;
+  // Variable declaration
+  var name, rollNo, GPA, state;
 
   // variable initilization
   name = 'Ali';
