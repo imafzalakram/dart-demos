@@ -1,9 +1,10 @@
 void main() {
-  // Variable declaration & inilization
-  var name = 'Ali', rollNo = 45, GPA = 3.56, isMarriade = false;
+  // Statically Typed Variables
+  String name = "Ali", fatherName, address;
+  int rollNo = 45, phoneNumber = 03003232345, postalCode;
+  double gpa = 3.45;
+  bool status = false;
   
-  print(name);
-  print(rollNo);
-  print(GPA);
-  print(isMarriade);
+  fatherName = "XYZ";
+  address = "adadf";
 }
