@@ -1,22 +1,14 @@
 void main() {
-  // Variable declaration
+// Variable declaration
   var name;
-  // variable initizilation
-  name = 'Ali';
-
-  // variable declaration
   var rollNo;
-  //variable initialzaiton
-  rollNo = 45;
-
-  //variable declaraiton
   var GPA;
-  // variable initilization
-  GPA = 3.35;
-
-  //variable declaraiton
   var state;
-  // variable initizilation
+
+  // variable initilization
+  name = 'Ali';
+  rollNo = 45;
+  GPA = 3.45;
   state = true;
 
   print(name);
