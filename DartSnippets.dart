@@ -1,16 +1,36 @@
 void main() {
-  passFunctionAsParam(addNumbers, multiplyNumbers, 10, 20);
+  List list = ["Physics", "Chemistry", "Computer Science"];
+  Set<int> marks = {80, 65, 90};
+  Map<String, dynamic> institutionDetail = {
+    'institute_name': 'University of Sargodha',
+    'institute_location': 'Sargodha',
+    'student_strrngth': 15000
+  };
+  printStudentInfo("Ali", 45, 3.36, true, list, marks, institutionDetail);
 }
 
-passFunctionAsParam(Function i, Function j, int no1, int no2) {
-    print("The sum is ${i(no1, no2)}");
-    print("The product is ${j(no1, no2)}");
-}
+void printStudentInfo(
+    String name,
+    int rollNo,
+    double gpa,
+    bool isChecked,
+    List subjects,
+    Set<int> subjectsMarks,
+    Map<String, dynamic> instituteDetaail) {
+  print("Student name is $name");
+  print("Student roll noo is $rollNo");
+  print("Student gpa is $gpa");
+  print("Student status is $isChecked");
 
-int addNumbers(no1, no2) {
-  return no1 + no2;
-}
+  for (var singleSubject in subjects) {
+    print(singleSubject);
+  }
 
-int multiplyNumbers(no1, no2) {
-  return no1 * no2 ;
+  for (var marks in subjectsMarks) {
+    print(marks);
+  }
+
+  for (var key in instituteDetaail.keys) {
+    print(instituteDetaail[key]);
+  }
 }
