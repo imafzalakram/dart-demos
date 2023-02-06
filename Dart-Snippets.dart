@@ -1,4 +1,5 @@
 void main() {
-  int? a;
-  print(a ?? 10);
+  int? a, b;
+  b = a ?? 34;
+  print(b);
 }
