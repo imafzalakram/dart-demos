@@ -1,15 +1,15 @@
+// How to pass named params into nested constructors
+
 void main() {
-  Human(
+  Human human = Human(
     male: Male(
       boy: Boy(
         student: Student(
-          monitor: Monitor(
-            developer: Developer(
-              freelancer: Freelancer(
-                name: "Ali",
-                platform: "Fiverr",
-                niche: "Mobile App Development",
-              ),
+          female: Female(),
+          developer: Developer(
+            "Ali",
+            freelancer: Freelancer(
+              upworkFreelancer: UpworkFreelancer(),
             ),
           ),
         ),
@@ -19,32 +19,45 @@ void main() {
 }
 
 class Human {
-  Human({required Male male}) {}
+  Human({Male? male}) {
+
+  }
 }
 
 class Male {
-  Male({required Boy boy}) {}
+  Male({Boy? boy}) {
+
+  }
 }
 
 class Boy {
-  Boy({required Student student}) {}
+  Boy({Student? student}) {
+
+  }
 }
 
 class Student {
-  Student({required Monitor monitor}) {}
-}
+  Student({required Female? female, required Developer? developer}) {
 
-class Monitor {
-  Monitor({required Developer developer}) {}
+  }
 }
 
 class Developer {
-  Developer({required Freelancer freelancer}) {}
+  Developer(String name, {required Freelancer? freelancer}) {
+
+  }
 }
 
 class Freelancer {
-  Freelancer(
-      {required String name,
-      required String platform,
-      required String niche}) {}
+  Freelancer({UpworkFreelancer? upworkFreelancer}) {
+
+  }
+}
+
+class UpworkFreelancer {
+
+}
+
+class Female {
+
 }
