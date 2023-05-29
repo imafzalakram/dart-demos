@@ -1,15 +1,19 @@
 /*
-  The explanation of callBack functions with base example
+  The example shows that how callBack functions work with named params
+  which is most widely used pattern in flutter
 */
+// USE-CASE-2
 void main() {
-  getData(45, (err, Map<String, dynamic> data) {
-    if (data.isNotEmpty) {
-      for (var value in data.values) print("$value");
-    }
-  });
+  getData(
+      id: 45,
+      onRequest: (err, Map<String, dynamic> data) {
+        if (data.isNotEmpty) {
+          for (var value in data.values) print("$value");
+        }
+      });
 }
 
-void getData(id, onRequest) {
+void getData({id, onRequest}) {
   Map<String, dynamic> userData = {
     "name": "Ali",
     "id": 23,
