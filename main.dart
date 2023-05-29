@@ -1,16 +1,16 @@
 /*
-  The example shows that how callBack functions work with named params
-  which is most widely used pattern in flutter
-*/
-// USE-CASE-2
+This example shows that we can have callBack functions as named-function,
+ normally we pass anonymous function for callBack functions but we can
+ also pass a named one
+ */
+callBack(err, Map<String, dynamic> data) {
+  if (data.isNotEmpty) {
+    for (var value in data.values) print("$value");
+  }
+}
+
 void main() {
-  getData(
-      id: 45,
-      onRequest: (err, Map<String, dynamic> data) {
-        if (data.isNotEmpty) {
-          for (var value in data.values) print("$value");
-        }
-      });
+  getData(id: 45, onRequest: callBack);
 }
 
 void getData({id, onRequest}) {
