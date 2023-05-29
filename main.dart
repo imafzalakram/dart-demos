@@ -1,19 +1,23 @@
 /*
-This example shows that we can have callBack functions as named-function,
- normally we pass anonymous function for callBack functions but we can
- also pass a named one
+  Why it's important to pass function as argu in callBack functions?
+  Answer: Callback actions can also be achieved without passing functions
+  as arguments, but passing functions as arguments  provides a clear way
+   to define and organize actions within the codebase.
+   “It promotes a separation of concerns, where each function or method
+    focuses on a specific task or action
  */
-callBack(err, Map<String, dynamic> data) {
+
+separateFunction(err, Map<String, dynamic> data) {
   if (data.isNotEmpty) {
     for (var value in data.values) print("$value");
   }
 }
 
 void main() {
-  getData(id: 45, onRequest: callBack);
+  getData(45);
 }
 
-void getData({id, onRequest}) {
+void getData(id) {
   Map<String, dynamic> userData = {
     "name": "Ali",
     "id": 23,
@@ -23,9 +27,9 @@ void getData({id, onRequest}) {
 
   if (userData.isNotEmpty) {
     // callBack-function is being called
-    onRequest(null, userData);
+    separateFunction(null, userData);
   } else {
     //callBack function is being called with null-data
-    onRequest("No data found", null);
+    separateFunction("No data found", {});
   }
 }
